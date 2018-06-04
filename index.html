@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+	(html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Anvireco</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Anvireco</h2>
+					<p>
+						Análisis Visual de Revisiones de Código
+					</p>
+					<ul class="actions">
+						<li>
+							<a href="https://anvireco.herokuapp.com" class="button special">
+								Demo on-line
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mjuez/TFM2016_Analisis-Visual-Revisiones-Codigo" class="button">
+								Repositorio en GitHub
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mjuez/TFM2016_Analisis-Visual-Revisiones-Codigo/raw/master/doc/memo/memoria.pdf" class="button">
+								Memoria
+							</a>
+						</li>
+					</ul>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>
+								Mejorando la calidad software
+								<br />
+								mediante el análisis del proceso de revisión
+							</h2>
+							<p>
+								El proceso de revisión de código está considerado
+								como una buena práctica de programación ágil, y cada
+								vez son más los proyectos que están incorporando 
+								este tipo de técnicas en su proceso de desarrollo.
+								<br />
+								<br />
+								La motivación principal de este Trabajo Fin de Máster
+								es desarrollar una herramienta que permita evaluar
+								de forma gráfica cómo se está realizando el proceso 
+								de revisión de código en diferentes proyectos para poder
+								mejorarlo (por ejemplo escogiendo los revisores adecuados) y 
+								con ello, obtener en última instancia un software de mejor 
+								calidad, con menos errores, y por tanto, más seguro.
+								<br />
+								<br />
+								Los datos utilizados por nuestra herramienta son extraídos 
+								de <a href="https://github.com/" target="_blank">GitHub</a>, a través de su 
+								<a href="https://developer.github.com/v3/?" target="_blank">API REST</a>.
+								<br />
+								GitHub es actualmente la mayor plataforma de desarrollo 
+								colaborativo, los mayores repositorios software <em>open-source</em> 
+								se encuentran alojados en ella. Además, entre sus diversas 
+								funcionalidades, GitHub cuenta con un completo sistema
+								para realizar revisiones de código integrado en sus 
+								<em>pull requests</em>. Por todo ello estimamos que GitHub 
+								era la fuente de datos perfecta para nuestra aplicación. 
+							</p>
+						</header>
+					</section>
+
+					<section class="box special features">
+						<div class="features-row">
+							<section>
+								<span class="icon major fa-star accent5"></span>
+								<h3>
+									<a href="https://www.sistedes.es/premios/premios-sistedes-accenture-technology-tfg-tfm-2018" target="_BLANK">
+										Premio al mejor TFM 2018
+									</a>
+								</h3>
+								<p>
+									Premio 
+									<strong>
+										SISTEDES y 
+										<a href="http://www.accenture.es/" target="_BLANK">
+											Accenture technology
+										</a>
+									</strong>
+									al mejor Trabajo Fin de Máster sobre 
+									<strong>
+										"Metodologías y herramientas para el 
+										desarrollo software"
+									</strong>, Edición de 2018.
+									
+								</p>
+							</section>
+						</div>
+					</section>
+
+					<div class="row">
+						<div class="6u 12u(narrower)">
+
+							<section class="box special">
+								<span class="image featured"><img src="images/extraccion_datos.jpg" alt="Extracción de datos desde GitHub" /></span>
+								<h3>Extracción de datos desde GitHub</h3>
+								<p>
+									Como la mayoría de API's actuales, la API
+									REST de GitHub, limita el número máximo de peticiones
+									por hora. Actualmente este límite es de 5000.
+								</p>
+								<p>
+									Para gestionar ese límite, se ha desarrollado un
+									gestor interno que es capaz de encolar solicitudes
+									de extracción de datos, procesarlas mientras haya
+									peticiones disponibles, y esperar a que se reinicie
+									el límite cuando se hayan consumido todas.
+								</p>
+							</section>
+
+						</div>
+
+						<div class="6u 12u(narrower)">
+
+							<section class="box special">
+								<span class="image featured"><img src="images/caracterizacion_repositorio.jpg" alt="Caracterización de repositorios" /></span>
+								<h3>Caracterización de repositorios</h3>
+								<p>
+									La aplicación permite al usuario caracterizar
+									diferentes repositorios (previamente solicitados a GitHub)
+									mediante diferentes gráficos para comparar un
+									repositorio frente a la media en términos cuantitativos
+									como número de estrellas, número de forks, etc.
+									<br />
+									Otros gráficos describen como se está realizando el proceso 
+									de revisión a lo largo del tiempo, o bien
+									como se utiliza el sistema de <em>pull requests</em> en ese repositorio
+									concreto, etc.
+								</p>
+							</section>
+
+						</div>
+
+					</div>
+
+					<div class="row">
+							<div class="6u 12u(narrower)">
+	
+								<section class="box special">
+									<span class="image featured"><img src="images/caracterizacion_pr.jpg" alt="Caracterización de Pull Requests" /></span>
+									<h3>Caracterización de <em>pull requests</em></h3>
+									<p>
+										La aplicación también permite caracterizar
+										diferentes <em>pull requests</em>
+										mediante diferentes gráficos sobre 
+										comparativas de tamaño (por ejemplo líneas añadidas vs eliminadas)
+										y sobre comparativas frente a la media.
+									</p>
+								</section>
+	
+							</div>
+	
+							<div class="6u 12u(narrower)">
+	
+								<section class="box special">
+									<span class="image featured"><img src="images/caracterizacion_usuario.jpg" alt="Caracterización de usuarios" /></span>
+									<h3>Caracterización de usuarios</h3>
+									<p>
+										La caracterización de usuarios (revisores)
+										puede resultar especialmente útil para mejorar 
+										el proceso de revisión.
+										<br /> Permite comparar usuarios en términos de 
+										revisiones, pull requests y comentarios de revisión.
+									</p>
+								</section>
+	
+							</div>
+	
+					</div>
+					
+					<div class="row">
+							<div class="6u 12u(narrower)">
+	
+								<section class="box special">
+									<span class="image featured"><img src="images/exportacion_csv.jpg" alt="Exportación de CSV" /></span>
+									<h3>Exportación de CSV</h3>
+									<p>
+										Además del análisis visual que ofrece la 
+										herramienta, es posible exportar todas las 
+										revisiones de un repositorio en formato CSV 
+										para utilizarlas para otros fines (por ejemplo <em>text mining</em>)
+									</p>
+								</section>
+	
+							</div>
+	
+							<div class="6u 12u(narrower)">
+	
+								<section class="box special">
+									<span class="image featured"><img src="images/api_anvireco.jpg" alt="API REST" /></span>
+									<h3>API REST pública</h3>
+									<p>
+										Los datos utilizados por la aplicación web 
+										para crear los diferentes gráficos pueden
+										ser obtenidos en formato JSON a través de 
+										la API REST pública que expone la herramienta.
+										<br />
+										El manual de uso de la API se encuentra 
+										disponible en la <a href="https://github.com/mjuez/TFM2016_Analisis-Visual-Revisiones-Codigo/wiki/Uso-de-la-API" target="_BLANK">wiki</a>.
+									</p>
+								</section>
+	
+							</div>
+	
+					</div>
+
+				</section>
+
+			<!-- CTA -->
+				<section id="cta">
+
+					<h2>Autor:</h2>
+					<p>Mario Juez Gil</p>
+
+					<h2>Tutores:</h2>
+					<p>
+						Carlos López Nozal
+						<br />
+						Raúl Marticorena Sánchez
+					</p>
+
+					<h2>Trabajo realizado para:</h2>
+					<p>Admirable Research Group y DIGIT. Universidad de Burgos.</p>
+					<a href="http://admirable-ubu.es/" target="_blank">
+						<img src="images/admirable.png" alt="Admirable Research Group" />
+					</a>
+					<a href="http://digit-moodle.blogspot.com/" target="_blank">
+						<img src="images/digit.png" alt="Docencia de Informática en Grados de Ingeniería y Trabajos de Fin de Grado" />
+					</a>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://github.com/mjuez/TFM2016_Analisis-Visual-Revisiones-Codigo" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:mario@mjuez.com" class="icon fa-envelope"><span class="label">E-mail</span></a></li>
+						<li><a href="https://www.linkedin.com/in/mjuez/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Anvireco. Todos los derechos reservados.</li><li>Plantilla web: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
